@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "934829584613",
+    "project_id": "cakebox-41a68",
+    "storage_bucket": "cakebox-41a68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934829584613:android:e10cb0a95c565d4e95a40c",
+        "android_client_info": {
+          "package_name": "com.example.cakebox"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWLD40moeIEw-fcxe5g28bX9Agg6vxw6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,5 +2,17 @@
     <string name="app_name">Cakebox</string>
     <string name="tag_line">Brought to you by :</string>
     <string name="app_logo_description">App Logo</string>
-    <string name="underline_brought_by"><i>Brought to you by</i></string>
+    <string name="brought_by"><i>Brought to you by</i></string>
+    <string name="factory_name"><i>The Hazelnut Factory</i></string>
+    <string name="back_arrow_description">Back</string>
+    <string name="welcome_text">Welcome to the sweets\'heaven</string>
+    <string name="login">Login</string>
+    <string name="email_hint">user@email.com</string>
+    <string name="password_hint">********</string>
+    <string name="login_button_text">Enter</string>
+    <string name="sign_out">Check Out</string>
+    <string name="check_in">Check In</string>
+    <string name="view_attendance">View
+        Attendance</string>
+
 </resources>

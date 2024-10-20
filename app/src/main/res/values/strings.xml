@@ -10,8 +10,8 @@
     <string name="email_hint">user@email.com</string>
     <string name="password_hint">********</string>
     <string name="login_button_text">Enter</string>
-    <string name="sign_out">Check Out</string>
-    <string name="check_in">Check In</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="check_in"><b>Check In</b></string>
     <string name="view_attendance">View
         Attendance</string>
 

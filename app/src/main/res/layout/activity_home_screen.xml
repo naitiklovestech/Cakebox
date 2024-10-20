@@ -43,8 +43,7 @@
         android:padding="16dp"
         android:weightSum="3"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="664dp">
+        tools:layout_editor_absoluteX="16dp">
 
         <!-- Check Out Button -->
         <TextView
@@ -55,31 +54,33 @@
             android:gravity="center"
             android:text="@string/sign_out"
             android:textColor="#546E7A"
-            app:drawableStartCompat="@drawable/ic_home" />
+            android:textSize="12sp"
+            app:drawableTopCompat="@drawable/ic_home" />
 
         <!-- View Attendance Button -->
 
-        <!-- View Attendance Button -->
         <TextView
-            android:layout_width="10dp"
-            android:layout_height="40dp"
+            android:layout_width="97dp"
+            android:layout_height="45dp"
             android:layout_weight="1"
             android:background="@drawable/circular_background_signin"
+            android:baselineAligned="false"
             android:drawablePadding="8dp"
             android:gravity="center"
             android:text="@string/check_in"
             android:textColor="@android:color/white"
-            app:drawableStartCompat="@drawable/circular_background_signin" />
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawablePadding="8dp"
+            android:drawablePadding="8sp"
             android:gravity="center"
             android:text="@string/view_attendance"
             android:textColor="#546E7A"
-            app:drawableStartCompat="@drawable/ic_attendance" />
+            android:textSize="12sp"
+            app:drawableTopCompat="@drawable/ic_attendance" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

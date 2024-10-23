@@ -12,7 +12,15 @@
     <string name="login_button_text">Enter</string>
     <string name="sign_out">Sign Out</string>
     <string name="check_in"><b>Check In</b></string>
-    <string name="view_attendance">View
-        Attendance</string>
+    <string name="view_attendance">View Attendance</string>
+    <string name="error_message">You are trying to mark attendance from an unauthorised email or entering a wrong password. Please have a look abd try again</string>
+    <string name="take_me_back">Take me back</string>
+    <string name="check_out">Check out</string>
+    <string name="warning_icon">Warning Icon</string>
+    <string name="close">Exit app</string>
+    <string name="error_title">Failed login.</string>
+    <string name="oops">Oops !!!</string>
+    <string name="invalid_place">Invalid place …</string>
+    <string name="login_error">Authentication failed. Please check your username and password, then try again.</string>
 
 </resources>

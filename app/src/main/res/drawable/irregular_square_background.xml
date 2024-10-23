@@ -1,0 +1,18 @@
+<!-- res/drawable/irregular_square_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <solid android:color="#EDE4BF"/>
+
+    <corners
+        android:topLeftRadius="16dp"
+        android:topRightRadius="8dp"
+        android:bottomRightRadius="16dp"
+        android:bottomLeftRadius="8dp" />
+
+    <padding
+        android:left="4dp"
+        android:top="4dp"
+        android:right="4dp"
+        android:bottom="4dp" />
+</shape>

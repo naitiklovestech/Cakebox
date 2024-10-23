@@ -9,8 +9,6 @@
     android:background="@drawable/error_background"
     tools:context=".ErrorActivity">
 
-    <!-- Back Button (top left corner) -->
-
     <!-- Main Card, filling the rest of the screen -->
     <ImageButton
         android:layout_width="54dp"
@@ -28,8 +26,8 @@
         android:layout_gravity="bottom"
         android:layout_marginHorizontal="24dp"
         android:layout_marginBottom="24dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="18dp"
         app:cardBackgroundColor="@android:color/white">
 
         <LinearLayout

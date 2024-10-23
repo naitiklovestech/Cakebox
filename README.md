@@ -12,9 +12,9 @@ Cakebox is an innovative Android application designed for employee attendance ma
 | **UI Design**                | ✅ Complete     |
 | **Database Schema Design**   | ✅ Complete     |
 | **Firebase Integration**     | ✅ Complete |
-| **Admin Panel Development**  | 🚧 In Progress     |
+| **Admin Panel Development**  | 🚧 In Progress    |
 | **Application Frontend**     | 🚧 In Progress |
-| **Application Backend**      | ⏳ Pending      |
+| **Application Backend**      | 🚧 In Progress    |
 | **Project Delivery**         | ⏳ Pending      |
 
 ---

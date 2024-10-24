@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.Cakebox" parent="Base.Theme.Cakebox" />
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.Cakebox.SplashActivity" parent="Base.Theme.Cakebox">
+        <item name="android:windowBackground">@drawable/splash_background</item> <!-- Custom background or image -->
+    </style>
+
 </resources>

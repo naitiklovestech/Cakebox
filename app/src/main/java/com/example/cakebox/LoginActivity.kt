@@ -1,45 +1,86 @@
-package com.example.cakebox;
+package com.example.app
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.Button;
-import android.widget.EditText;
-import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent
+import android.os.Bundle
+import android.text.TextUtils
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
-public class LoginActivity extends AppCompatActivity {
+class LoginActivity : AppCompatActivity() {
 
-    private EditText emailEditText;
-    private EditText passwordEditText;
+    private lateinit var auth: FirebaseAuth
+    private lateinit var emailEditText: EditText
+    private lateinit var passwordEditText: EditText
+    private lateinit var loginButton: Button
 
-    // Predefined credentials for testing
-    private final String correctEmail = "user@example.com";
-    private final String correctPassword = "password123";
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_login)
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_screen);
+        // Initialize Firebase Auth
+        auth = Firebase.auth
 
-        // Initialize views
-        emailEditText = findViewById(R.id.email);
-        passwordEditText = findViewById(R.id.password);
-        Button loginButton = findViewById(R.id.loginButton);
+        // UI elements
+        emailEditText = findViewById(R.id.email)
+        passwordEditText = findViewById(R.id.password)
+        loginButton = findViewById(R.id.loginButton)
 
-        // Set login button click listener
-        loginButton.setOnClickListener(view -> {
-            String inputEmail = emailEditText.getText().toString().trim();
-            String inputPassword = passwordEditText.getText().toString().trim();
+        // Check if user is already logged in
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            navigateToMainActivity(currentUser)
+        }
 
-            // Check if email and password match predefined credentials
-            Intent intent;
-            if (inputEmail.equals(correctEmail) && inputPassword.equals(correctPassword)) {
-                // If credentials match, navigate to HomeActivity
-                intent = new Intent(LoginActivity.this, HomeActivity.class);
-            } else {
-                // If credentials don't match, navigate to ErrorActivity
-                intent = new Intent(LoginActivity.this, ErrorActivity.class);
+        // Login Button Click Listener
+        loginButton.setOnClickListener {
+            val email = emailEditText.text.toString().trim()
+            val password = passwordEditText.text.toString().trim()
+
+            if (TextUtils.isEmpty(email)) {
+                emailEditText.error = "Please enter email"
+                return@setOnClickListener
             }
-            startActivity(intent);
-        });
+
+            if (TextUtils.isEmpty(password)) {
+                passwordEditText.error = "Please enter password"
+                return@setOnClickListener
+            }
+
+            loginUser(email, password)
+        }
+    }
+
+    private fun loginUser(email: String, password: String) {
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Login successful
+                    val user = auth.currentUser
+                    if (user != null) {
+                        navigateToMainActivity(user)
+                    }
+                } else {
+                    // If login fails, display a message to the user.
+                    Toast.makeText(baseContext, "Login failed. Please try again.", Toast.LENGTH_SHORT).show()
+                }
+            }
+    }
+
+    private fun navigateToMainActivity(user: FirebaseUser) {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish() // Close LoginActivity
+    }
+
+    // Optionally override the back button behavior if needed
+    override fun onBackPressed() {
+        super.onBackPressed()
+        // You can handle any back navigation logic here
     }
 }

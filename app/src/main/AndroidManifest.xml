@@ -39,7 +39,7 @@
 
         <!-- Login Activity -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".LoginActivityJavatbd"
             android:exported="true">
     </activity>
 
